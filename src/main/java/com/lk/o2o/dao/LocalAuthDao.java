@@ -2,9 +2,11 @@ package com.lk.o2o.dao;
 
 import com.lk.o2o.entity.LocalAuth;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
+@Repository
 public interface LocalAuthDao {
 
     /**

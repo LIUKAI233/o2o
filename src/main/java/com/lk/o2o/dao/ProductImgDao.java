@@ -1,9 +1,11 @@
 package com.lk.o2o.dao;
 
 import com.lk.o2o.entity.ProductImg;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface ProductImgDao {
     /**
      * 批量插入商品图片
