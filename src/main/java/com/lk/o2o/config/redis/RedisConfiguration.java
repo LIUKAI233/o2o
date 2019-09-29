@@ -91,6 +91,7 @@ public class RedisConfiguration {
     /*
      * Redis的Sets操作
      */
+    @Bean(name = "jedisSets")
     public JedisUtil.Sets createJedisSets(){
         return jedisUtil.new Sets();
     }
@@ -98,6 +99,7 @@ public class RedisConfiguration {
     /*
      * Redis的Hash操作
      */
+    @Bean(name = "jedisHash")
     public JedisUtil.Hash createHash(){
         return jedisUtil.new Hash();
     }
@@ -105,6 +107,7 @@ public class RedisConfiguration {
     /*
      * Redis的Lists操作
      */
+    @Bean(name = "jedisLists")
     public JedisUtil.Lists createLists(){
         return jedisUtil.new Lists();
     }

@@ -2,7 +2,6 @@ package com.lk.o2o.config.dao;
 
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +9,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.io.IOException;
 
@@ -36,7 +36,7 @@ public class SessionFactoryConfiguration {
     @Value("${type_alias_package}")
     private String typeAliasPackage;
 
-    @Autowired
+    @Resource(name = "dataSource")
     private DataSource dataSource;
 
     /**
